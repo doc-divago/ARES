@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Navigator test</title>
+	</head>
+	<body>
+		<p>Premi il bottone per ricevere le tue coordinate GPS</p>
+		<button onclick="getLocation()">Coordinate</button>
+		<p id="demo"></p>
+		
+		<script>
+			var x = document.getElementById("demo");
+			
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				} else {
+					x.innerHTML = "La geolocalizzazione non è supportata da questo browser"
+				}
+			}
+			
+			function showPosition(position){
+				x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude
+			}
+			
+		</script>
+		
+	</body>
+</html>
