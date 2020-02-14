@@ -7,8 +7,11 @@ le seguenti funzionalità:
 const x = document.getElementById("demo");
 
 function getLocation() {
+	//Verifica se il browser gestisce la geolocalizzazione
 	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(showPosition);
+		//Restituisce una funzione che ha come parametro la posizione del device.
+		//Sta allo sviluppatore definire come questa funzione gestisca l'informazione.
+		navigator.geolocation.getCurrentPosition(showPosition); 
 	} else {
 		x.innerHTML = "La geolocalizzazione non è supportata da questo browser"
 	}
