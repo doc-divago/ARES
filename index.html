@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Test ARGEO 02</title>
+		<title>Test ARGEO 03</title>
 		<script src="https://aframe.io/releases/0.9.2/aframe.min.js" charset="utf-8"></script>
 		<script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js" charset="utf-8"></script>
 		<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js" charset="utf-8"></script>
@@ -19,6 +19,7 @@
 			arjs="sourceType: webcam;  sourceWidth: 1280; sourceHeight: 960; displayWidth: 1280; displayHeight:960; debugUIEnabled: false;">
 			<a-camera gps-camera rotation-reader></a-camera>
 <!--			<a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 12.706427258469164; latitude: 42.95717529180326;" animation-mixer/> -->
+			<a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" position="0 0 -2" animation-mixer/>
 		</a-scene>
 		<p>Premi il bottone per ricevere le tue coordinate GPS.</p>
 		<button onclick="getLocation()">Coordinate GPS</button>

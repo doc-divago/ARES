@@ -34,7 +34,7 @@ function showPokemon(position) {
 	model.setAttribute('gps-entity-place', 'latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};');
 	model.setAttribute('gltf-model','.assets/magnemite/scene.gltf');
 	model.setAttribute('rotation', '0 180 0');
-	model.setAttribute('distance','3')
+//	model.setAttribute('distance','3')
 	model.setAttribute('scale','0.15 0.15 0.15');
 	model.setAttribute('animation-mixer', '');
 	model.addEventListener('loaded', () => {window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))});
